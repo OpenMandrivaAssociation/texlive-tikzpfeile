@@ -52,3 +52,11 @@ create all arrows using PGF/TikZ, so as to avoid the problem.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Sat Apr 14 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
++ Revision: 790839
+- Import texlive-tikzpfeile
+- Import texlive-tikzpfeile
+

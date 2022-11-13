@@ -1,19 +1,13 @@
-# revision 25777
-# category Package
-# catalog-ctan /graphics/pgf/contrib/tikzpfeile
-# catalog-date 2012-03-28 23:45:32 +0200
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-tikzpfeile
-Version:	1.0
-Release:	11
+Version:	25777
+Release:	1
 Summary:	Draw arrows using PGF/TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzpfeile
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzpfeile.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzpfeile.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzpfeile.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzpfeile.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzpfeile.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzpfeile.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ different sorts of arrowheads in the diagrams and in the text
 create all arrows using PGF/TikZ, so as to avoid the problem.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,18 +39,11 @@ create all arrows using PGF/TikZ, so as to avoid the problem.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Sat Apr 14 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 790839
-- Import texlive-tikzpfeile
-- Import texlive-tikzpfeile
-

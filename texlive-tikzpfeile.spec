@@ -1,6 +1,6 @@
 Name:		texlive-tikzpfeile
 Version:	25777
-Release:	1
+Release:	2
 Summary:	Draw arrows using PGF/TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzpfeile

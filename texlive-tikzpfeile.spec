@@ -3,7 +3,7 @@ Version:	25777
 Release:	2
 Summary:	Draw arrows using PGF/TikZ
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzpfeile
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzpfeile
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzpfeile.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzpfeile.doc.r%{version}.tar.xz
